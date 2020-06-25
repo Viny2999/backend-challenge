@@ -1,5 +1,3 @@
-const nums = [2, 7, 11, 15], alvo = 9;
-
 const retornaComponentesDeSoma = (nums, alvo) => {
 	let res = [];
 	
@@ -13,4 +11,4 @@ const retornaComponentesDeSoma = (nums, alvo) => {
 	return res;
 }
 
-console.log(retornaComponentesDeSoma(nums, alvo));
+console.log(retornaComponentesDeSoma([2, 7, 11, 15], 9));
