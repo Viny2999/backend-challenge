@@ -8,6 +8,10 @@ const braceClose = '}';
 const checkIsBalanced = (oneString) => {
 	let littleStack = [];
 
+	if ((oneString.length % 2) !== 0) {
+		return 'NAO';
+	} 
+
 	for (let i = 0; i < oneString.length; i++) { 
 		switch(oneString.charAt(i)) {
 			case parentheseOpen:

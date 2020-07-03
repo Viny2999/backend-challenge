@@ -2,13 +2,15 @@ const retornaComponentesDeSoma = (nums, alvo) => {
 	let res = [];
 	
 	nums.forEach((num, index) => {
-		if (nums[index] + nums[index + 1] == alvo) { 
-			res.push(index);
-			res.push(index + 1);
-		}
+		for (let j = index + 1; j < nums.length; j++) {
+            if (nums[j] == alvo - nums[index]) {
+                res.push(index);
+				res.push(j);
+            }
+        }
 	});
 
 	return res;
 }
 
-console.log(retornaComponentesDeSoma([2, 7, 11, 15], 9));
+console.log(retornaComponentesDeSoma([2, 7, 11, 15], 13));
